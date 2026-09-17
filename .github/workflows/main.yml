@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+      
+  workflow_dispatch:
+    inputs:
+      category:
+        description: "Single category to process (leave empty for all)"
+        default: ""
+        required: false
 
 jobs:
   run-python-script:
